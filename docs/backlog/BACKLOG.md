@@ -54,7 +54,7 @@ Acceptance criteria:
 Tests: sample unit test, home page smoke test.
 
 ### T-02: CI pipeline green
-Status: todo | Owner: Claude | Depends on: T-01
+Status: in-progress | Owner: Claude | Depends on: T-01
 Story: As the developer, I want every PR checked automatically so broken code can't reach `main`.
 Acceptance criteria:
 - `.github/workflows/ci.yml` runs `npm run check` and `npm run test:smoke` on every PR and push to `main`.
