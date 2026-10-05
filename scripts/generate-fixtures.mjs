@@ -15,12 +15,17 @@ const CRC_TABLE = (() => {
   return table;
 })();
 
+/** @param {Buffer} buf */
 function crc32(buf) {
   let c = 0xffffffff;
   for (let i = 0; i < buf.length; i++) c = CRC_TABLE[(c ^ buf[i]) & 0xff] ^ (c >>> 8);
   return (c ^ 0xffffffff) >>> 0;
 }
 
+/**
+ * @param {string} type
+ * @param {Buffer} data
+ */
 function chunk(type, data) {
   const len = Buffer.alloc(4);
   len.writeUInt32BE(data.length, 0);
@@ -30,8 +35,14 @@ function chunk(type, data) {
   return Buffer.concat([len, typeBuf, data, crcBuf]);
 }
 
-// Minimal uncompressed (zlib level 0) RGB PNG — enough for a synthetic test
-// fixture without pulling in an image-encoding dependency.
+/**
+ * Minimal uncompressed (zlib level 0) RGB PNG — enough for a synthetic test
+ * fixture without pulling in an image-encoding dependency.
+ * @param {string} name
+ * @param {number} width
+ * @param {number} height
+ * @param {number} fillByte
+ */
 function writePng(name, width, height, fillByte) {
   const rowSize = 1 + width * 3; // filter byte + RGB
   const raw = Buffer.alloc(rowSize * height, fillByte);
@@ -59,9 +70,13 @@ function writePng(name, width, height, fillByte) {
   writeFileSync(new URL(name, OUT_DIR), png);
 }
 
-// Synthetic "JPEG-shaped" fixture: real JPEG SOI/EOI markers wrapping
-// deterministic filler bytes, sized to the requested byte count — enough to
-// exercise upload/size-limit logic without needing a real photo.
+/**
+ * Synthetic "JPEG-shaped" fixture: real JPEG SOI/EOI markers wrapping
+ * deterministic filler bytes, sized to the requested byte count — enough to
+ * exercise upload/size-limit logic without needing a real photo.
+ * @param {string} name
+ * @param {number} sizeBytes
+ */
 function writeJpegLike(name, sizeBytes) {
   const soi = Buffer.from([0xff, 0xd8]);
   const eoi = Buffer.from([0xff, 0xd9]);
