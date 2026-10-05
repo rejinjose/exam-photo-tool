@@ -1,20 +1,10 @@
 ---
-import "../styles/global.css";
-import Hello from "../components/Hello";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Exam Photo Tool</title>
-  </head>
-  <body class="min-h-screen bg-white text-slate-900">
-    <main class="flex min-h-screen items-center justify-center p-6">
-      <div class="text-center">
-        <h1 class="text-2xl font-semibold">Exam Photo Tool</h1>
-        <Hello client:load />
-      </div>
-    </main>
-  </body>
-</html>
+<BaseLayout title="Exam Photo Tool">
+  <div class="mx-auto max-w-screen-xl px-4 py-16 text-center sm:px-6">
+    <h1 class="text-2xl font-semibold text-ink">Exam Photo Tool</h1>
+    <p class="mt-2 text-muted">The tool will go here.</p>
+  </div>
+</BaseLayout>

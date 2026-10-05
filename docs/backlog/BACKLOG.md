@@ -65,7 +65,11 @@ Acceptance criteria:
 - Playwright report uploaded as an artifact when smoke tests fail.
 
 ### T-03: App shell and design tokens
-Status: todo | Owner: Claude | Depends on: T-01
+Status: done | Owner: Claude | Depends on: T-01
+Built: BaseLayout (header/main/footer) with Header/Footer as React components;
+colour/radius tokens in a `@theme` block in global.css; verified at 360/768/1280px
+in the browser. Retired T-01's `Hello` demo island — its message now lives in
+the real Footer.
 Story: As a student on a phone, I want a clean, trustworthy page so I feel safe uploading my photo.
 Acceptance criteria:
 - Base layout: header with name, main area, footer with "Your photos never leave your device" and a privacy link placeholder.
