@@ -1,0 +1,20 @@
+---
+import "../styles/global.css";
+import Hello from "../components/Hello";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Exam Photo Tool</title>
+  </head>
+  <body class="min-h-screen bg-white text-slate-900">
+    <main class="flex min-h-screen items-center justify-center p-6">
+      <div class="text-center">
+        <h1 class="text-2xl font-semibold">Exam Photo Tool</h1>
+        <Hello client:load />
+      </div>
+    </main>
+  </body>
+</html>
