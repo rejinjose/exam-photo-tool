@@ -10,7 +10,7 @@ Order of work: top to bottom, respecting `Depends on`.
 ## Epic H — Rejin's tasks
 
 ### H-1: GitHub and local setup
-Status: todo | Owner: Rejin
+Status: done | Owner: Rejin
 - Follow SETUP.md steps 1–5: tools installed, `gh auth login` done, repo created, starter kit pushed to `main`.
 
 ### H-2: Collect official exam rules
@@ -38,7 +38,10 @@ Status: todo | Owner: Rejin | Depends on: T-02
 ## Epic A — Foundation
 
 ### T-01: Scaffold the project
-Status: todo | Owner: Claude | Depends on: H-1
+Status: done | Owner: Claude | Depends on: H-1
+Built: Astro + React + TS(strict) + Tailwind v4 scaffold; npm scripts (dev/build/lint/
+typecheck/test/test:smoke/check); Vitest+RTL and Playwright (mobile viewport) each with
+one passing test; Husky pre-commit; synthetic fixture generator (no real photos).
 Story: As the developer, I want a working project skeleton so every later ticket has a stable base.
 Acceptance criteria:
 - Astro + React + TypeScript (strict) + Tailwind set up; `npm run dev` shows a placeholder page.
