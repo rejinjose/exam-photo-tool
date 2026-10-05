@@ -54,7 +54,10 @@ Acceptance criteria:
 Tests: sample unit test, home page smoke test.
 
 ### T-02: CI pipeline green
-Status: todo | Owner: Claude | Depends on: T-01
+Status: done | Owner: Claude | Depends on: T-01
+Built: removed the stale `hashFiles('package.json')` guards now that T-01 made it
+permanent; verified in CI that the `playwright-report` artifact actually uploads
+when the `check` job's smoke-test step fails.
 Story: As the developer, I want every PR checked automatically so broken code can't reach `main`.
 Acceptance criteria:
 - `.github/workflows/ci.yml` runs `npm run check` and `npm run test:smoke` on every PR and push to `main`.
