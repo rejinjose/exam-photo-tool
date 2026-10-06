@@ -1,22 +1,33 @@
 [
   {
-    "id": "placeholder-1",
-    "name": "Placeholder Exam 1",
-    "body": "TBD",
-    "photo": { "minKB": 0, "maxKB": 0, "width": 0, "height": 0, "format": "" },
-    "signature": { "minKB": 0, "maxKB": 0, "width": 0, "height": 0, "format": "" },
-    "notes": "",
-    "source": "",
-    "lastVerified": "",
-    "verified": false
+    "id": "ibps-po-crp-mt-xvi",
+    "name": "IBPS PO (CRP PO/MT-XVI)",
+    "body": "IBPS",
+    "photo": { "minKB": 20, "maxKB": 50, "width": 200, "height": 230, "format": "jpg" },
+    "signature": { "minKB": 10, "maxKB": 20, "width": 140, "height": 60, "format": "jpg" },
+    "notes": "Live photo via webcam/phone also required during registration, in addition to the uploaded photo. Also requires a left thumb impression (20-50KB, 240x240px, jpg, 3cm x 3cm) and a handwritten declaration (50-100KB, 800x400px, jpg, 10cm x 5cm) -- not yet modeled by this schema, which only covers photo and signature. Caps, hats, dark glasses not acceptable; religious headwear allowed if face uncovered. Signature not in capital letters.",
+    "source": "IBPS CRP PO/MT-XVI official notification, dated 01.07.2026, Annexure III (Guidelines for Scanning and Upload of Documents), pp. 36-38. PDF on file (no stable public download URL captured yet; official site is www.ibps.in).",
+    "lastVerified": "2026-10-06",
+    "verified": true
   },
   {
-    "id": "placeholder-2",
-    "name": "Placeholder Exam 2",
-    "body": "TBD",
-    "photo": { "minKB": 0, "maxKB": 0, "width": 0, "height": 0, "format": "" },
-    "signature": { "minKB": 0, "maxKB": 0, "width": 0, "height": 0, "format": "" },
-    "notes": "",
+    "id": "sbi-po-2026",
+    "name": "SBI PO (Probationary Officer)",
+    "body": "SBI",
+    "photo": { "minKB": 20, "maxKB": 50, "width": 200, "height": 230, "format": "jpg" },
+    "signature": { "minKB": 10, "maxKB": 20, "width": 140, "height": 60, "format": "jpg" },
+    "notes": "Live photo via webcam/phone also required during registration, in addition to the uploaded photo. Also requires a left thumb impression (20-50KB, 240x240px, jpg, 3cm x 3cm) and a handwritten declaration (50-100KB, 800x400px, jpg, 10cm x 5cm) -- not yet modeled by this schema, which only covers photo and signature. Signature not in capital letters.",
+    "source": "SBI advertisement CRPD/PO/2026-27/09, dated 18.06.2026, Annexure II, p. 14. PDF on file (no stable public download URL captured yet; official site is https://bank.sbi/web/careers/current-openings).",
+    "lastVerified": "2026-10-06",
+    "verified": true
+  },
+  {
+    "id": "sbi-clerk-junior-associate",
+    "name": "SBI Clerk (Junior Associate)",
+    "body": "SBI",
+    "photo": { "minKB": 20, "maxKB": 50, "width": 200, "height": 230, "format": "jpg" },
+    "signature": { "minKB": 10, "maxKB": 20, "width": 140, "height": 60, "format": "jpg" },
+    "notes": "NOT CONFIRMED CURRENT: sourced from advertisement CRPD/CR/2025-26/06 (the 2025 cycle). The 2026-27 cycle advertisement (expected to be numbered CRPD/CR/2026-27/17) has not yet been checked -- these numbers need reconfirming against it before this entry is marked verified. Same extra uploads as SBI PO (thumb impression, handwritten declaration), not yet modeled by this schema.",
     "source": "",
     "lastVerified": "",
     "verified": false

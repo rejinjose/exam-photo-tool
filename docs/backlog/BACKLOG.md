@@ -14,11 +14,22 @@ Status: done | Owner: Rejin
 - Follow SETUP.md steps 1–5: tools installed, `gh auth login` done, repo created, starter kit pushed to `main`.
 
 ### H-2: Collect official exam rules
-Status: todo | Owner: Rejin
+Status: in-progress | Owner: Rejin
 - For 10–15 major exams, copy photo and signature rules from the **official** notification
   into `src/data/exams.json` (after T-05 creates the file), with `source` URL and `lastVerified` date.
 - Set `"verified": true` only after checking against the official PDF.
 - Note extra rules (date/name on photo, thumb impression) in `notes`.
+
+Progress: 2 of 10-15 verified so far -- IBPS PO (CRP PO/MT-XVI) and SBI PO
+(CRPD/PO/2026-27/09), both checked directly against the official notification PDFs
+Rejin provided. A third, SBI Clerk, is entered but left `verified: false`: the only PDF
+available was last year's cycle (CRPD/CR/2025-26/06) -- needs reconfirming against the
+2026-27 notification once published. `source` cites the notification/annexure instead of
+a URL, since Rejin supplied downloaded PDFs rather than links -- flagged in case a real
+URL should replace this later. Still needed: UPSC Civil Services, SSC CHSL, IBPS Clerk,
+RRB NTPC, CTET, Indian Passport (all unverified/partial per Rejin's research so far), plus
+more exams to reach 10-15. Also surfaced a schema gap: IBPS/SBI exams require a third
+upload (thumb impression + handwritten declaration) that `ExamPreset` doesn't model yet.
 
 ### H-3: Connect Cloudflare Pages
 Status: todo | Owner: Rejin
