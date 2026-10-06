@@ -8,7 +8,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "lint": "eslint .",
-    "typecheck": "astro check && tsc --noEmit -p tsconfig.vitest.json",
+    "typecheck": "astro check && tsc --noEmit",
     "pretest": "npm run fixtures:generate",
     "test": "vitest run",
     "pretest:smoke": "npm run fixtures:generate",

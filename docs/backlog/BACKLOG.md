@@ -64,8 +64,35 @@ Acceptance criteria:
 - The job is named `check` and passes on this ticket's PR.
 - Playwright report uploaded as an artifact when smoke tests fail.
 
+### T-02a: Audit and close gaps in lint/typecheck coverage
+Status: done | Owner: Claude | Depends on: T-02
+Built: merged `tsconfig.vitest.json` into the one `tsconfig.json` VS Code auto-discovers
+(fixes the editor/CI mismatch); turned on `checkJs` so `.mjs` files are actually
+type-checked instead of silently skipped, and fixed the 9 real implicit-`any` errors
+that surfaced in `scripts/generate-fixtures.mjs` with JSDoc types. Full coverage audit
+and the one accepted gap (`.astro` ESLint) are in this ticket's PR.
+Story: As the developer, I want every source file covered by our checks, so the editor
+and CI catch the same errors.
+Background: `tests/unit/components/Footer.test.tsx` shows "Property 'toHaveTextContent'
+does not exist on type 'Assertion'" in VS Code, but CI passed. So `npm run typecheck`
+doesn't cover `tests/`, and other folders may be uncovered too.
+Acceptance criteria:
+- List every folder and file type in the repo (src, tests, scripts, config files like
+  `*.config.ts`, `.astro`, etc.) and report which are covered by lint and which by
+  typecheck, before changing anything.
+- Extend lint and typecheck to cover everything that can be covered.
+- Run them across the whole repo and fix every error found.
+- jest-dom matchers have no type errors in VS Code or in `npm run typecheck`.
+- Do not hide errors: no `@ts-ignore`, `any`, disabled rules, or new ignore patterns to
+  make errors disappear.
+- Anything that can't be covered (e.g. `.astro` linting due to the ESLint version
+  conflict) is listed in the PR with the reason.
+- If you find real bugs outside tooling that need more than a small fix, log them as new
+  tickets instead of fixing them here.
+- `npm run check` and `npm run test:smoke` pass.
+
 ### T-03: App shell and design tokens
-Status: done | Owner: Claude | Depends on: T-01
+Status: done | Owner: Claude | Depends on: T-01, T-02a
 Built: BaseLayout (header/main/footer) with Header/Footer as React components;
 colour/radius tokens in a `@theme` block in global.css; verified at 360/768/1280px
 in the browser. Retired T-01's `Hello` demo island — its message now lives in
