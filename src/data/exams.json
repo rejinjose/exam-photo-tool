@@ -1,0 +1,24 @@
+[
+  {
+    "id": "placeholder-1",
+    "name": "Placeholder Exam 1",
+    "body": "TBD",
+    "photo": { "minKB": 0, "maxKB": 0, "width": 0, "height": 0, "format": "" },
+    "signature": { "minKB": 0, "maxKB": 0, "width": 0, "height": 0, "format": "" },
+    "notes": "",
+    "source": "",
+    "lastVerified": "",
+    "verified": false
+  },
+  {
+    "id": "placeholder-2",
+    "name": "Placeholder Exam 2",
+    "body": "TBD",
+    "photo": { "minKB": 0, "maxKB": 0, "width": 0, "height": 0, "format": "" },
+    "signature": { "minKB": 0, "maxKB": 0, "width": 0, "height": 0, "format": "" },
+    "notes": "",
+    "source": "",
+    "lastVerified": "",
+    "verified": false
+  }
+]

@@ -117,7 +117,12 @@ Acceptance criteria:
 ## Epic B — Exam data
 
 ### T-05: Preset schema and validator
-Status: todo | Owner: Claude | Depends on: T-01
+Status: done | Owner: Claude | Depends on: T-01
+Built: `ExamPreset`/`SizeRule` types and a hand-written `validateExamPresets()` in
+src/lib/exam-schema.ts (no new dependency); two zeroed, unverified placeholder entries
+in src/data/exams.json. Dimension/format/range checks apply only when `verified: true`
+(Rejin's call) — duplicate-id and the source/lastVerified-required-when-verified checks
+always apply. A regression test runs the validator against the real exams.json.
 Story: As the developer, I want exam rules in one validated file so a typo can't produce wrong photos.
 Acceptance criteria:
 - `src/data/exams.json` with TypeScript types: `id`, `name`, `body`, `photo` and `signature` objects
